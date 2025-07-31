@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英語本文 単語学習</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            background-color: #eaf5ff;
+            border-left: 5px solid #3498db;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+        .instructions p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .controls {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        #toggle-all-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #toggle-all-btn:hover {
+            background-color: #2980b9;
+        }
+        .content {
+            white-space: pre-line; /* 改行を維持し、テキストを折り返す */
+            overflow-wrap: break-word;
+            font-size: 16px;
+        }
+        .toggleable-word {
+            cursor: pointer;
+        }
+        .toggleable-word .en {
+            font-weight: bold;
+            color: #d35400; /* Orange color for English */
+        }
+        .toggleable-word .ja {
+            display: none;
+            color: #2980b9; /* Blue color for Japanese */
+            font-weight: normal;
+            padding: 1px 4px;
+            background-color: #ecf5ff;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        /* 'hidden' class shows Japanese and hides English */
+        .toggleable-word.hidden .en {
+            display: none;
+        }
+        .toggleable-word.hidden .ja {
+            display: inline;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>英語本文 単語学習ツール</h1>
+        <div class="instructions">
+            <p>
+                使い方：<br>
+                - 青い日本語訳をクリックすると、対応する英単語に切り替わります。<br>
+                - 下のボタン、またはキーボードの <strong>スペースキー</strong> or <strong>Tキー</strong> で全体を一括切り替えできます。
+            </p>
+        </div>
+
+        <div class="controls">
+            <button id="toggle-all-btn">英語を全て表示</button>
+        </div>
+
+        <div class="content">partA-1
+<span class="section-title">【原文】</span>
+The products that we buy and use in our daily lives are made by someone somewhere. Behind the price tags of some products, <span class="toggleable-word hidden"><span class="en">there may be</span><span class="ja">[〜があるかもしれない]</span></span> laborers working in poor conditions in <span class="toggleable-word hidden"><span class="en">developing countries</span><span class="ja">[発展途上国]</span></span>, including children forced to work and <span class="toggleable-word hidden"><span class="en">unable to</span><span class="ja">[〜できない]</span></span> go to school. <span class="toggleable-word hidden"><span class="en">There may be</span><span class="ja">[〜があるかもしれない]</span></span> also great environmental damage. Although consumers of these products are often unaware, the workers who make the products often work in terrible conditions. They sometimes go on strikes over wages or safety issues. It is not surprising that they are unhappy. For example, in Bangladesh in 2013, a sewing factory collapsed and there were many casualties among workers. For a short time, a careless safety management issue got some attention. Another example is coffee growers. Many are regularly <span class="toggleable-word hidden"><span class="en">under pressure</span><span class="ja">[圧力をかけられている]</span></span> to sell coffee beans <span class="toggleable-word hidden"><span class="en">at low prices</span><span class="ja">[低価格で]</span></span> by trading companies from developed countries. This <span class="toggleable-word hidden"><span class="en">forces them to</span><span class="ja">[彼らに〜させる]</span></span> <span class="toggleable-word hidden"><span class="en">live in poverty</span><span class="ja">[貧困生活をおくる]</span></span>. Roughly 80% of bananas imported into Japan come from the Philippines. Most consumers in Japan are unaware that in some areas, pesticides are sprayed in the air <span class="toggleable-word hidden"><span class="en">resulting in</span><span class="ja">[〜という結果になる]</span></span> the pesticides spreading in many directions. This causes serious health effects for local residents, and kills animals and reduces biodiversity.
+<span class="section-title">【直訳】</span>
+私たちが日々の生活で買い、使う製品は、どこかの誰かによって作られている。いくつかの製品の値札の背後には、開発途上国で劣悪な状況で働く労働者がいるかもしれず、それには働くことを強いられ学校に行けない子供たちも含まれる。また、大きな環境破壊があるかもしれない。これらの製品の消費者はしばしば気づいていないが、製品を作る労働者たちはしばしばひどい状況で働いている。彼らは時々、賃金や安全問題についてストライキを行う。彼らが不満であることは驚くべきことではない。例えば、2013年のバングラデシュでは、縫製工場が崩壊し、労働者の間に多くの死傷者が出た。短期間、ずさんな安全管理の問題がいくらかの注目を集めた。もう一つの例はコーヒー栽培者である。多くは、先進国の貿易会社によって、安い価格でコーヒー豆を売るよう常に圧力をかけられている。これは彼らとその家族に貧困の中で生活することを強いる。日本に輸入されるバナナのおよそ80%はフィリピンから来る。日本のほとんどの消費者は、いくつかの地域では、農薬が空中に散布され、その結果、農薬が多くの方向に拡散していることに気づいていない。これは地域住民に深刻な健康への影響を引き起こし、動物を殺し、生物多様性を減少させる。
+<span class="section-title">【意訳】</span>
+私たちが日常的に購入して使っている製品は、世界のどこかで、誰かの手によって作られています。しかし、その値札の裏側には、発展途上国で劣悪な環境で働く人々がいるかもしれません。中には、学校にも行けず、働くことを強いられている子供たちもいます。また、生産の過程で深刻な環境破壊が起きている可能性もあります。私たち消費者はそうした事実を知らないことが多いのですが、生産者である労働者たちは、非常に過酷な状況で働いていることが少なくありません。彼らは賃金や安全性の問題を訴えて、ストライキを起こすこともあります。彼らが不満を抱いているのも無理はありません。例えば、2013年にバングラデシュで起きた縫製工場の崩壊事故では、多くの労働者が犠牲になりました。この事故をきっかけに、ずさんな安全管理の問題が一時的に注目されました。コーヒー農家もまた、その一例です。彼らの多くは、先進国の貿易会社から、不当に安い価格でコーヒー豆を売るよう常に圧力をかけられています。その結果、農家とその家族は貧しい生活を強いられているのです。日本が輸入するバナナの約8割はフィリピン産ですが、日本の消費者のほとんどは、現地の農園地域で農薬が空中散布され、広範囲に拡散しているという実態を知りません。この農薬散布は、地域住民に深刻な健康被害をもたらし、動物を死に至らせ、生物多様性を破壊しています。
+partA-2
+<span class="section-title">【原文】</span>
+It is <span class="toggleable-word hidden"><span class="en">natural for</span><span class="ja">[〜は当然だ]</span></span> consumers to purchase products <span class="toggleable-word hidden"><span class="en">based on</span><span class="ja">[〜に基づいて]</span></span> their own interests, such as price, design, and performance. However, resources on earth are limited. When the world population reaches 9.7 billion in 2050, we will need the resources of three earths if consumers continue to act as they do now. Economic development through mass production, mass consumption, and mass disposal is not only depleting resources, but also causing human rights issues, environmental pollution, and climate change. This must change. We need to be <span class="toggleable-word hidden"><span class="en">conscious of</span><span class="ja">[〜を意識している]</span></span> the production of products and their raw materials, and choose products that are made <span class="toggleable-word hidden"><span class="en">with consideration for</span><span class="ja">[〜に配慮して]</span></span> people, local communities, and the environment. SDG 12, "Ensure sustainable consumption and production patterns," is <span class="toggleable-word hidden"><span class="en">aimed at</span><span class="ja">[〜を目指している]</span></span> this issue. It encourages of consumption that eases the <span class="toggleable-word hidden"><span class="en">burden on</span><span class="ja">[〜への負荷]</span></span> the global environment and creates a sustainable society. This kind of consumption is called "ethical consumption."
+<span class="section-title">【直訳】</span>
+消費者が価格、デザイン、性能といった自身の利益に基づいて製品を購入するのは自然なことである。しかし、地球上の資源は限られている。もし消費者が今と同じように行動し続けるなら、2050年に世界人口が97億人に達した時、私たちは地球3個分の資源を必要とするだろう。大量生産、大量消費、大量廃棄による経済発展は、資源を枯渇させているだけでなく、人権問題、環境汚染、気候変動も引き起こしている。これは変わらなければならない。私たちは製品の生産とそれらの原材料についてもっと意識する必要があり、人々、地域社会、そして環境への配慮をもって作られた製品を選ぶ必要がある。SDG 12、「持続可能な消費と生産のパターンを確保する」は、この問題に向けられている。それは、地球環境への負荷を和らげ、持続可能な社会を創造する消費を奨励する。この種の消費は「エシカル消費」と呼ばれる。
+<span class="section-title">【意訳】</span>
+私たち消費者が、価格やデザイン、性能といった自分の基準で商品を選ぶのは、ごく自然なことです。しかし、地球の資源には限りがあります。もし今のままの消費生活を続ければ、世界人口が97億人に達する2050年には、地球3個分の資源が必要になると言われています。大量生産・大量消費・大量廃棄を前提とした経済発展は、資源を使い果たすだけでなく、人権問題や環境汚染、気候変動までも引き起こしているのです。私たちは、この状況を変えなければなりません。そのためには、製品がどのように作られ、その原材料がどこから来ているのかをもっと意識し、人々や地域社会、そして環境に配慮して作られた製品を選ぶ必要があります。SDGs（持続可能な開発目標）の12番目の目標である「つくる責任 つかう責任」は、まさにこの問題に取り組むためのものです。この目標は、地球環境への負担を減らし、持続可能な社会を築くような消費を促しています。このような消費のあり方を「エシカル消費（倫理的な消費）」と呼びます。
+
+PartB
+<span class="section-title">【原文】</span>
+To become ethical consumers, we first need to be <span class="toggleable-word hidden"><span class="en">aware of</span><span class="ja">[〜を意識している]</span></span> three types of impact when shopping <span class="toggleable-word hidden"><span class="en">as stated by</span><span class="ja">[〜に述べられているように]</span></span> the Consumer Affairs Agency. We need to think about the <span class="toggleable-word hidden"><span class="en">impact of the product on</span><span class="ja">[製品が〜への影響]</span></span> the people who make them, on the environment, and on communities and societies. We have to understand that spending our money is like “<span class="toggleable-word hidden"><span class="en">voting for</span><span class="ja">[〜への投票]</span></span>” businesses. Whatever we choose to buy and consume supports those businesses and their practices. It <span class="toggleable-word hidden"><span class="en">encourages them to</span><span class="ja">[彼らに〜するよう勧める]</span></span> do more of what they are doing.
+The second thing to <span class="toggleable-word hidden"><span class="en">keep in mind</span><span class="ja">[〜を覚えておく]</span></span> for ethical consumption is to use environmental labels as a clue when <span class="toggleable-word hidden"><span class="en">making a purchase</span><span class="ja">[買い物をする]</span></span>. An environmental label is a mark or sign that tells you how the makers of a product or service are <span class="toggleable-word hidden"><span class="en">trying to</span><span class="ja">[〜しようとしている]</span></span> reduce the environmental impact of the product. You have probably seen marks such as the fair trade label before. Some convenience store chains in Japan also put stickers on products <span class="toggleable-word hidden"><span class="en">close to</span><span class="ja">[〜に近い]</span></span> their sell-by date <span class="toggleable-word hidden"><span class="en">in order to</span><span class="ja">[〜するために]</span></span> tackle the problem of food waste. One company is also <span class="toggleable-word hidden"><span class="en">trying to</span><span class="ja">[〜しようとしている]</span></span> reduce food waste <span class="toggleable-word hidden"><span class="en">by giving</span><span class="ja">[〜によって]</span></span> special points to customers who buy these products. The chain also asks all customers to take the products from the front of the shelf. This is an instance where consumers and companies are working together to implement better consumption.
+However, <span class="toggleable-word hidden"><span class="en">as shown in</span><span class="ja">[〜に示されているように]</span></span> Figure 1, according to the Consumer Affairs Agency’s 2019 Awareness Survey, the awareness of words related to ethical consumption increased overall compared to 2016, but the term “ethical consumption” itself was understood by only 12.2% of those surveyed. The term “sustainability” was similarly poorly understood by only about 15% of respondents. This shows that although efforts are being made by individuals, organizations, and governments, there is still much to be done. It is important for consumers to regularly begin asking themselves this question: What is the connection between your purchases and the world? Thinking about the <span class="toggleable-word hidden"><span class="en">answer to</span><span class="ja">[〜への答え]</span></span> this before you buy any product is a step toward creating a more sustainable world.
+<span class="section-title">【直訳】</span>
+エシカルな消費者になるために、私たちはまず、消費者庁によって述べられているように、買い物の際に3種類の影響を意識する必要がある。私たちは、製品がそれを作る人々、環境、そして地域社会や社会全体に与える影響について考える必要がある。私たちはお金を使うことが企業への「投票」のようなものであると理解しなければならない。私たちが何を選んで買い、消費するにしても、それはそれらの企業とそのやり方を支持する。それは、彼らや他の企業が、彼らがしていることをもっとするように奨励する。
+エシカル消費のために心に留めておくべき2番目のことは、購入を行う際に環境ラベルを手がかりとして使うことである。環境ラベルとは、製品やサービスの作り手が、その製品の環境への影響をいかに減らそうとしているかをあなたに伝えるマークやしるしである。あなたはおそらく、フェアトレードラベルのようなマークを以前に見たことがあるだろう。日本のいくつかのコンビニエンスストアチェーンも、食品廃棄の問題に取り組むために、販売期限に近い製品にステッカーを貼っている。ある会社はまた、これらの製品を買う顧客に特別なポイントを与えることで食品廃棄を減らそうと試みている。そのチェーンはまた、すべての顧客に棚の手前から製品を取るよう頼んでいる。これは、消費者と企業がより良い消費を実行するために協力して働いている一例である。
+しかし、図1に示されるように、消費者庁の2019年意識調査によると、エシカル消費に関連する言葉の認知度は2016年と比較して全体的に増加したが、「エシカル消費」という言葉自体は調査対象者のわずか12.2%にしか理解されていなかった。「サステナビリティ」という言葉も同様に、回答者の約15%にしか理解されておらず、理解度が低かった。これは、個人、組織、そして政府によって努力がなされているものの、まだなされるべきことが多くあることを示している。消費者が定期的に自分自身にこの質問を問い始めることが重要である：「あなたの購入と世界との間にはどのようなつながりがありますか？」何か製品を買う前にこの質問への答えについて考えることは、より持続可能な世界を創造するための一歩である。
+<span class="section-title">【意訳】</span>
+では、どうすれば「エシカルな消費者」になれるのでしょうか。まず、消費者庁が示しているように、買い物をする際には3つの影響を意識することが大切です。それは、その商品が「作り手である人々」「環境」「地域社会や社会全体」にどのような影響を与えるか、ということです。私たちがお金を出して商品を買う行為は、その企業を支持する「投票」のようなものだと理解する必要があります。私たちがどんな商品を選んで買うかによって、その企業の活動を支えることになり、それはその企業や他の企業に対しても、同じようなやり方を続けるよう促すメッセージとなるのです。
+エシカル消費のために心がけるべき2つ目のことは、商品を購入する際に「環境ラベル」をヒントにすることです。環境ラベルとは、その商品やサービスの生産者が、環境への負担をどのように減らそうと努力しているかを示すマークのことです。皆さんも、「フェアトレードラベル」のようなマークを一度は目にしたことがあるのではないでしょうか。また、日本のコンビニなどでは、食品ロス問題への対策として、販売期限が近い商品に割引シールなどを貼っています。そうした商品を購入した客に特別なポイントを付与して、食品ロス削減に取り組んでいる企業もあります。さらに、そうしたチェーン店では、お客さんに対して商品を棚の手前から取るように呼びかけています。これらは、消費者と企業が協力して、より良い消費のあり方を実現しようとしている素晴らしい例です。
+しかし、課題もあります。図1が示すように、消費者庁の2019年の意識調査によれば、エシカル消費に関連する言葉の認知度は2016年と比べて全体的には上がっているものの、「エシカル消費」という言葉そのものの意味を理解している人は、調査対象者のうちわずか12.2%でした。同様に、「サステナビリティ（持続可能性）」という言葉も、理解している人は約15%と、依然として低い水準にあります。この結果は、個人や企業、政府が努力を始めている一方で、まだまだやるべきことが多いということを示しています。だからこそ、私たち消費者が「自分の買い物が、世界とどう繋がっているのだろう？」と、日頃から自問自答してみることが大切なのです。何かを買う前に、この問いの答えを一度考えてみること。それこそが、より持続可能な世界を築くための、確かな一歩となるのです。
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('toggle-all-btn');
+            const words = document.querySelectorAll('.toggleable-word');
+            // Initially, Japanese is visible, so English is not.
+            let isEnglishVisible = false;
+
+            // Function to toggle all words
+            const toggleAllWords = () => {
+                isEnglishVisible = !isEnglishVisible;
+                words.forEach(word => {
+                    if (isEnglishVisible) {
+                        word.classList.remove('hidden');
+                    } else {
+                        word.classList.add('hidden');
+                    }
+                });
+                toggleButton.textContent = isEnglishVisible ? '日本語訳を全て表示' : '英語を全て表示';
+            };
+
+            // Toggle all via button
+            toggleButton.addEventListener('click', toggleAllWords);
+
+            // Toggle all via keyboard
+            document.addEventListener('keydown', (event) => {
+                if (event.code === 'Space' || event.code === 'KeyT') {
+                    event.preventDefault(); // Stop spacebar from scrolling
+                    toggleAllWords();
+                }
+            });
+
+            // Toggle individual word on click
+            words.forEach(word => {
+                word.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    // Find the .toggleable-word parent to toggle its class
+                    let target = event.target;
+                    while (target != null && !target.classList.contains('toggleable-word')) {
+                        target = target.parentElement;
+                    }
+                    if (target) {
+                        target.classList.toggle('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
